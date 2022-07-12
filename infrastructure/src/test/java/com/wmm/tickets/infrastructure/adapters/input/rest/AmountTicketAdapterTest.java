@@ -19,27 +19,28 @@ import static util.TestUtil.*;
 public class AmountTicketAdapterTest {
 
     private AmountTicketInputAdapter amountTicketAdapter;
-
+    private Ticket ticket =TICKET_REQUEST.toModel();
     @Mock
     private TicketsUseCase amountTicketsUseCase;
 
-    private void setUp(TicketsUseCase amountTicketsUseCase){
+    private void setUp(){
         amountTicketAdapter = new AmountTicketInputAdapter(amountTicketsUseCase);
     }
 
     @Test
     public void adapterReturnAnResponseObjectToBeAbleToShareComplexDataWithClients(){
-        Mockito.when(amountTicketsUseCase.incomes(USER_ID_TEST, START_DATE, END_DATE)).thenReturn(new Ticket(USER_ID_TEST,CREDIT_AMOUNT, START_DATE, END_DATE
-        ));
-        setUp(amountTicketsUseCase);
+        Ticket ticketModel = TICKET_REQUEST.toModel();
+        Mockito.when(amountTicketsUseCase.incomes(ticketModel)).thenReturn(ticketModel);
+        setUp();
         TicketResponse response = amountTicketAdapter.incomes(TICKET_REQUEST);
         assertThat(response.getAmount()).isEqualTo(CREDIT_AMOUNT.toString());
     }
 
     @Test
     public void adapterNeedForAUserCaseToImplementOperations(){
-        Mockito.when(amountTicketsUseCase.incomes(USER_ID_TEST, START_DATE, END_DATE)).thenReturn(new Ticket(USER_ID_TEST,CREDIT_AMOUNT, START_DATE, END_DATE));
-        setUp(amountTicketsUseCase);
+
+        Mockito.when(amountTicketsUseCase.incomes(ticket)).thenReturn(ticket);
+        setUp();
         TicketResponse response = amountTicketAdapter.incomes(TICKET_REQUEST);
         assertThat(response.getAmount()).isEqualTo(CREDIT_AMOUNT.toString());
     }
@@ -47,6 +48,7 @@ public class AmountTicketAdapterTest {
     @Test
     public void givenABadTicketRequestThenAnExceptionisThrown(){
         assertThatThrownBy(()->{
+            setUp();
             TicketResponse response = amountTicketAdapter.incomes(BAD_TICKET_REQUEST);
         }).isInstanceOf(IncompleteRequestDataException.class);
 

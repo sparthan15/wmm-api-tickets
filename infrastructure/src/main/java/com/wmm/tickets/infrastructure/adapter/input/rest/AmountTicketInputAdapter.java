@@ -18,8 +18,7 @@ public class AmountTicketInputAdapter {
     @PostMapping("incomes")
     public TicketResponse incomes(@RequestBody TicketRequest ticketRequest) {
         String ticketAmount = amountTicketsUseCase
-                .incomes(ticketRequest.getUserId(), ticketRequest.getStartDate(),
-                        ticketRequest.getEndDate()).getAmount().toString();
+                .incomes(ticketRequest.toModel()).getAmount().toString();
 
         return new TicketResponse(ticketAmount,
                 ticketRequest.getStartDate().toString(),

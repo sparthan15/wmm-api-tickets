@@ -1,6 +1,7 @@
 package com.wmm.tickets.infrastructure.model.request;
 
 import com.wmm.domain.IncompleteRequestDataException;
+import com.wmm.tickets.domain.entities.Ticket;
 import com.wmm.tickets.infrastructure.adapter.input.rest.model.request.TicketRequest;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,14 @@ public class TicketRequestTest {
         TicketRequest ticketRequest = new TicketRequest("123KASD", START_DATE, END_DATE);
         Assertions.assertThat(ticketRequest.getUserId()).isNotNull();
     }
+
+    @Test
+    public void ticketRequestCanBeConvertedToModel() {
+        TicketRequest ticketRequest = new TicketRequest("123KASD", START_DATE, END_DATE);
+        Ticket ticket = ticketRequest.toModel();
+        Assertions.assertThat(ticketRequest.toModel().getUserId()).isNotNull();
+    }
+
 
     @Test
     public void givenATicketRequestHasNoStartDateThenAnsExceptionIsThrwn() {
