@@ -1,1 +1,5 @@
-D:\Mi empresa\where-is-my-money\wmm-api-tickets\wmm-api-domain\src\main\java\com\wmm\tickets\domain\entities\Ticket.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\domain\src\main\java\com\wmm\tickets\domain\exception\IncompleteRequestDataException.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\domain\src\main\java\com\wmm\tickets\domain\businessrules\TicketRequestValidation.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\domain\src\main\java\com\wmm\tickets\domain\exception\IncompleteResponseDataException.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\domain\src\main\java\com\wmm\tickets\domain\request\TicketRequest.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\domain\src\main\java\com\wmm\tickets\domain\entities\Ticket.java

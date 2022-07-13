@@ -1,0 +1,10 @@
+com\wmm\tickets\infrastructure\adapter\config\ErrorResponse.class
+com\wmm\tickets\infrastructure\adapter\output\mongodb\repository\MovementRepository.class
+com\wmm\tickets\infrastructure\adapter\input\rest\model\request\InputTicketRequest.class
+com\wmm\tickets\infrastructure\adapter\input\rest\model\request\InputTicketRequest$InputTicketRequestBuilder.class
+com\wmm\tickets\infrastructure\adapter\TicketsApplication.class
+com\wmm\tickets\infrastructure\adapter\config\UseCaseConfiguration.class
+com\wmm\tickets\infrastructure\adapter\output\mongodb\AmountTicketOutputAdapter.class
+com\wmm\tickets\infrastructure\adapter\input\rest\AmountTicketInputAdapter.class
+com\wmm\tickets\infrastructure\adapter\input\rest\model\response\TicketResponse.class
+com\wmm\tickets\infrastructure\adapter\input\rest\ControllerAdvice.class

@@ -8,7 +8,7 @@ public class TicketResponseTesst {
 
     @Test
     public void test() {
-        TicketResponse ticketResponse = new TicketResponse("20.2", "2022-07-09", "2022-07-09");
+        TicketResponse ticketResponse = new TicketResponse("20.2");
         Assertions.assertThat(ticketResponse).isNotNull();
     }
 }

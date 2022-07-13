@@ -1,0 +1,6 @@
+com\wmm\tickets\infrastructure\model\request\InputTicketRequestTest.class
+com\wmm\tickets\infrastructure\model\request\response\TicketResponseTesst.class
+com\wmm\tickets\infrastructure\adapters\ouput\mongodb\MongoTemplateTest.class
+util\TestUtil.class
+com\wmm\tickets\infrastructure\adapters\input\rest\AmountTicketAdapterTest.class
+com\wmm\tickets\infrastructure\TicketsApplicationTests.class

@@ -1,1 +1,4 @@
-D:\Mi empresa\where-is-my-money\wmm-api-tickets\application\src\test\java\GetTicketAmountUseCaseTest.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\application\src\test\java\com\wmm\tickets\application\usecases\TicketAmountUseCaseTest.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\application\src\test\java\com\wmm\tickets\application\usecases\utils\TestDescription.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\application\src\test\java\com\wmm\tickets\application\usecases\BigDecimalTest.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\application\src\test\java\com\wmm\tickets\application\usecases\utils\TestObjectCreator.java

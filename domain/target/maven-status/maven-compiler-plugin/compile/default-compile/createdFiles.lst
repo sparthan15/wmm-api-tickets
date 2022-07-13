@@ -1,0 +1,7 @@
+com\wmm\tickets\domain\entities\Ticket.class
+com\wmm\tickets\domain\exception\IncompleteRequestDataException.class
+com\wmm\tickets\domain\entities\Ticket$TicketBuilder.class
+com\wmm\tickets\domain\exception\IncompleteResponseDataException.class
+com\wmm\tickets\domain\businessrules\TicketRequestValidation.class
+com\wmm\tickets\domain\request\TicketRequest$TicketRequestBuilder.class
+com\wmm\tickets\domain\request\TicketRequest.class

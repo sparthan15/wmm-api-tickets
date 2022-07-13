@@ -1,1 +1,4 @@
-GetTicketAmountUseCaseTest.class
+com\wmm\tickets\application\usecases\utils\TestObjectCreator.class
+com\wmm\tickets\application\usecases\BigDecimalTest.class
+com\wmm\tickets\application\usecases\utils\TestDescription.class
+com\wmm\tickets\application\usecases\TicketAmountUseCaseTest.class

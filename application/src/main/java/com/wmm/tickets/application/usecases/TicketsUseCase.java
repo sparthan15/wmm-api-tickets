@@ -1,11 +1,12 @@
 package com.wmm.tickets.application.usecases;
 
 import com.wmm.tickets.domain.entities.Ticket;
+import com.wmm.tickets.domain.request.TicketRequest;
 
-import java.time.LocalDateTime;
+import java.math.BigDecimal;
 
 public interface TicketsUseCase {
-    Ticket incomes(Ticket ticket);
+    BigDecimal incomesAmount(TicketRequest ticket);
 
-    Ticket outcomes(Ticket ticket);
+    BigDecimal outcomesAmount(TicketRequest ticket);
 }

@@ -2,22 +2,31 @@
 
 import com.wmm.domain.vo.MovementType;
 import com.wmm.tickets.application.ports.output.AmountTicketOutputPort;
-import com.wmm.tickets.application.usecase.AmountTicketsUseCase;
+import com.wmm.tickets.application.usecases.TicketsUseCase;
+import com.wmm.tickets.domain.entities.Ticket;
+import com.wmm.tickets.domain.businessrules.TicketRequestValidation;
+import com.wmm.tickets.domain.request.TicketRequest;
 import lombok.RequiredArgsConstructor;
 
-<span class="fc" id="L8">@RequiredArgsConstructor</span>
-public class AmountTicketsInputPort implements AmountTicketsUseCase {
+import java.math.BigDecimal;
+
+<span class="fc" id="L13">@RequiredArgsConstructor</span>
+public class AmountTicketsInputPort implements TicketsUseCase {
 
     private final AmountTicketOutputPort amountTicketOutputPort;
 
     @Override
-    public Double incomes(String userId) {
-<span class="fc" id="L15">        return amountTicketOutputPort.getMovementsAmountByUserId(userId, MovementType.CREDIT);</span>
+    public BigDecimal incomesAmount(TicketRequest ticketRequest) {
+<span class="fc" id="L20">        TicketRequestValidation.validate(ticketRequest);</span>
+<span class="fc" id="L21">        return amountTicketOutputPort.sumAmountByUserIdAndMovementTypeAndDateGreaterThanAndDateLessThan(ticketRequest.getUserId(),</span>
+<span class="fc" id="L22">                MovementType.CREDIT, ticketRequest.getStartDate(), ticketRequest.getEndDate());</span>
     }
 
     @Override
-    public Double outcomes(String userId) {
-<span class="fc" id="L20">        return amountTicketOutputPort.getMovementsAmountByUserId(userId, MovementType.DEBIT);</span>
+    public BigDecimal outcomesAmount(TicketRequest ticketRequest) {
+<span class="fc" id="L27">        TicketRequestValidation.validate(ticketRequest);</span>
+<span class="fc" id="L28">        return amountTicketOutputPort.sumAmountByUserIdAndMovementTypeAndDateGreaterThanAndDateLessThan(ticketRequest.getUserId(), MovementType.DEBIT, ticketRequest.getStartDate(), ticketRequest.getEndDate());</span>
+
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

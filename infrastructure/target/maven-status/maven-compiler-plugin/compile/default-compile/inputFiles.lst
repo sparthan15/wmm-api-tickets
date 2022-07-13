@@ -1,0 +1,9 @@
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\infrastructure\src\main\java\com\wmm\tickets\infrastructure\adapter\config\UseCaseConfiguration.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\infrastructure\src\main\java\com\wmm\tickets\infrastructure\adapter\input\rest\ControllerAdvice.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\infrastructure\src\main\java\com\wmm\tickets\infrastructure\adapter\config\ErrorResponse.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\infrastructure\src\main\java\com\wmm\tickets\infrastructure\adapter\input\rest\model\response\TicketResponse.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\infrastructure\src\main\java\com\wmm\tickets\infrastructure\adapter\input\rest\AmountTicketInputAdapter.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\infrastructure\src\main\java\com\wmm\tickets\infrastructure\adapter\output\mongodb\repository\MovementRepository.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\infrastructure\src\main\java\com\wmm\tickets\infrastructure\adapter\output\mongodb\AmountTicketOutputAdapter.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\infrastructure\src\main\java\com\wmm\tickets\infrastructure\adapter\input\rest\model\request\InputTicketRequest.java
+D:\Mi empresa\where-is-my-money\wmm-api-tickets\infrastructure\src\main\java\com\wmm\tickets\infrastructure\adapter\TicketsApplication.java
