@@ -66,8 +66,8 @@ public class AmountTicketOutputAdapter implements AmountTicketOutputPort {
                   LocalDateTime endDate){
         Query query = new Query();
         query.addCriteria(Criteria
-                .where("userId").is("1")
-                .and("date").gt(startDate).lt(endDate)
+                .where("userId").is(userId)
+                .and("date").gte(startDate).lt(endDate)
                 .and("movementType").is(movementType));
 
         List<MovementEntity> movements = mongoTemplate.find(query, MovementEntity.class);
